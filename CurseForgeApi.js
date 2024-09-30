@@ -202,7 +202,7 @@ class CurseForgeApi{
         })
     }
 
-    async getModLoaders({modloader = "", parameters = {}}){
+    async getModLoaders({modloader = "", parameters = {}} = {}){
         const url = new URL(`/v1/minecraft/modloader/${modloader}`, this.baseUrl)
 
         for (const [key, value] of Object.entries(parameters)) {
